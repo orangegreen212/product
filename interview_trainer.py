@@ -200,12 +200,17 @@ def call_groq(system_prompt: str, user_message: str,
 with st.sidebar:
     st.markdown("## ⚙️ Settings")
 
+    # Auto-load from Streamlit Cloud secrets if available
+    _secret_key = st.secrets.get("GROQ_API_KEY", "") if hasattr(st, "secrets") else ""
     api_key = st.text_input(
         "Groq API Key",
+        value=_secret_key,
         type="password",
         placeholder="gsk_...",
         help="Get a free key at console.groq.com",
     )
+    if _secret_key:
+        st.success("✅ API key loaded from Secrets", icon="🔑")
 
     st.markdown("---")
     st.markdown("### 🎛️ Model Settings")
