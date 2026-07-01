@@ -1,4 +1,4 @@
-# Interview Practice Trainer — Turing College Sprint 1
+# Interview Practice Trainer 
 
 A Streamlit app for interview preparation powered by Groq API (Llama 3.3-70b).
 
