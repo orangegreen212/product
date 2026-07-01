@@ -66,7 +66,7 @@ st.markdown("""
 
 
 # ─── Constants ────────────────────────────────────────────────────────────────
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "qwen/qwen3.6-27b"
 
 ROLES = ["Data Analyst", "Data Scientist", "Product Manager",
          "Software Engineer", "ML Engineer"]
@@ -241,7 +241,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(
         "<div style='color:#475569;font-size:0.75rem;'>"
-        f"Model: <code>{MODEL}</code><br>"
+        f"Model: <code>qwen/qwen3.6-27b</code><br>"
         "Turing College · Sprint 1</div>",
         unsafe_allow_html=True,
     )
